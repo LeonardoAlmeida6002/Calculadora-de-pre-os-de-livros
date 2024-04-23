@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora de livros</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="titulo">Calculadora de preço de livros</h1>
+    </header>
+
+    <main id="main">
+        <h3 class="quantLivro">Quantidade de livros:</h3>
+        <input id="quantidade" type="text">
+
+        <h3 class="precoLivro">Preço por livro (em R$):</h3>
+        <input id="preco" type="text">
+
+        <p></p>
+
+        <button onclick="calcularPreco()">Calcular preço final</button>
+
+        <p id="precoFinal">Preço final:</p>
+
+
+        <script>
+
+            function calcularPreco() {
+                let quantLivros = document.getElementById('quantidade').value;
+                let precoLivros = document.getElementById('preco').value;
+
+                let precoFinal = document.getElementById('precoFinal');
+                precoFinal.textContent =("O preço final ficou em: R$" +quantLivros * precoLivros)
+            }
+        
+        </script>
+
+    </main>
+
+    
+</body>
+
+</html>
